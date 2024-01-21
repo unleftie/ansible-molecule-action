@@ -11,6 +11,10 @@ on:
     - cron: "5 4 1 * *"
   workflow_dispatch:
 
+permissions:
+  packages: write
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
