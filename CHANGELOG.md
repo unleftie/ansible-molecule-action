@@ -2,6 +2,17 @@
 
 
 
+## v0.0.3 (2024-01-21)
+
+### Fix
+
+* fix: release on merged pr [skip ci] ([`18472ab`](https://github.com/unleftie/ansible-molecule-action/commit/18472ab07caf4b631c06c89a6a4e91412a666540))
+
+### Unknown
+
+* Merge branch &#39;main&#39; of github.com:unleftie/ansible-molecule-action ([`bfb1e44`](https://github.com/unleftie/ansible-molecule-action/commit/bfb1e44cefd872ff697807b0cac6b7d8c9831da2))
+
+
 ## v0.0.2 (2024-01-21)
 
 ### Fix
