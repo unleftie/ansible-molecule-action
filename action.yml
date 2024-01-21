@@ -4,7 +4,7 @@ author: Denys Rondaliev <denysrondaliev@gmail.com>
 
 branding:
   icon: "box"
-  color: "yellow"
+  color: "gray-dark"
 
 inputs:
   github_token:
