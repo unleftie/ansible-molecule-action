@@ -1,4 +1,4 @@
-name: Run Ansible Molecule
+name: Run Ansible Molecule action
 description: Run Ansible Molecule
 author: Denys Rondaliev <denysrondaliev@gmail.com>
 
