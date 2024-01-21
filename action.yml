@@ -49,4 +49,3 @@ runs:
         MOLECULE_DISTRO: ${{ inputs.distro }}
         ROLE_NAME: ${{ inputs.role_name }}
         GHA_TOKEN: ${{ inputs.github_token }}
-
