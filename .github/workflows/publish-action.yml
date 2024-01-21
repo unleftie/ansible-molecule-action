@@ -1,7 +1,7 @@
 name: Publish new action version
 
 on:
-  # release:
+  release:
   workflow_dispatch:
     inputs:
       TAG_NAME:
