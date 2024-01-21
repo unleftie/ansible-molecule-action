@@ -26,12 +26,6 @@ jobs:
           persist-credentials: false
 
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v4
+        uses: go-semantic-release/action@v1
         with:
-          branches: |
-            [
-              'master',
-              'main',
-            ]
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
