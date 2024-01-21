@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+      - "LICENSE"
+      - ".github/dependabot.yml"
+    branches: ["master", "main"]
+  schedule:
+    - cron: "5 4 1 * *"
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Python Semantic Release
+        uses: python-semantic-release/python-semantic-release@v8.7.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

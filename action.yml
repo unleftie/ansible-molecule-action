@@ -1,0 +1,51 @@
+name: Ansible Molecule Action
+description: Run Ansible Molecule
+author: Denys Rondaliev <denysrondaliev@gmail.com>
+
+branding:
+  icon: "box"
+  color: "gray-dark"
+
+inputs:
+  github_token:
+    description: GitHub token to clone dependencies
+    required: true
+    default: "$GITHUB_TOKEN"
+  role_name:
+    description: Ansible role name
+    required: true
+  distro:
+    description: Distribution
+    required: false
+    default: "debian12"
+  working_directory:
+    description: Working directory
+    required: false
+    default: "."
+  python_version:
+    description: Python version
+    required: false
+    default: "3.*"
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python_version }}
+
+    - name: Install dependencies
+      run: "python3 -m pip install ansible molecule molecule-plugins[docker] docker jmespath"
+      shell: bash
+
+    - name: Run Molecule
+      run: "molecule test"
+      working-directory: ${{ inputs.working_directory }}
+      shell: bash
+      env:
+        PY_COLORS: "1"
+        ANSIBLE_FORCE_COLOR: "1"
+        MOLECULE_DISTRO: ${{ inputs.distro }}
+        ROLE_NAME: ${{ inputs.role_name }}
+        GHA_TOKEN: ${{ inputs.github_token }}
