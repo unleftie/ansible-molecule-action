@@ -1,3 +1,3 @@
 # ansible-molecule-action
 
-## internal use only
+internal use only
