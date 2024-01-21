@@ -1,4 +1,4 @@
-name: Publish new action version
+name: Update action tag
 
 on:
   release:
