@@ -28,6 +28,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           update-file: "action.yml"
-          changelog-file: "CHANGELOG.md"
           changelog-generator-opt: "emojis=true"
-          prepend: true
