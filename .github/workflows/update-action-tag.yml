@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
 
       - name: Update the ${{ env.TAG_NAME }} tag
         uses: actions/publish-action@v0.3.0
