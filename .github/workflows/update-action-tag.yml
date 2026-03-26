@@ -25,11 +25,11 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ github.token }}
 
       - name: Update the ${{ env.TAG_NAME }} tag
-        uses: actions/publish-action@v0.3.0
+        uses: actions/publish-action@v0.4.0
         with:
           source-tag: ${{ env.TAG_NAME }}
